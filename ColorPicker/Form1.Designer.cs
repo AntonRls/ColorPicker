@@ -31,23 +31,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
             this.label_info_1 = new System.Windows.Forms.Label();
             this.label_info_2 = new System.Windows.Forms.Label();
             this.label_info_3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -74,6 +77,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -81,6 +85,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(182, 254);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(16, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(16, 166);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(74, 74);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -103,28 +125,10 @@
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(16, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(16, 166);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(74, 74);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
             // trackBar1
             // 
             this.trackBar1.LargeChange = 1;
-            this.trackBar1.Location = new System.Drawing.Point(203, 43);
+            this.trackBar1.Location = new System.Drawing.Point(10, 23);
             this.trackBar1.Maximum = 255;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(307, 56);
@@ -135,7 +139,7 @@
             // trackBar2
             // 
             this.trackBar2.LargeChange = 1;
-            this.trackBar2.Location = new System.Drawing.Point(203, 83);
+            this.trackBar2.Location = new System.Drawing.Point(10, 78);
             this.trackBar2.Maximum = 255;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(307, 56);
@@ -146,7 +150,7 @@
             // trackBar3
             // 
             this.trackBar3.LargeChange = 1;
-            this.trackBar3.Location = new System.Drawing.Point(203, 123);
+            this.trackBar3.Location = new System.Drawing.Point(10, 133);
             this.trackBar3.Maximum = 255;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(307, 56);
@@ -157,7 +161,7 @@
             // label_info_1
             // 
             this.label_info_1.AutoSize = true;
-            this.label_info_1.Location = new System.Drawing.Point(516, 43);
+            this.label_info_1.Location = new System.Drawing.Point(316, 23);
             this.label_info_1.Name = "label_info_1";
             this.label_info_1.Size = new System.Drawing.Size(28, 16);
             this.label_info_1.TabIndex = 10;
@@ -166,7 +170,7 @@
             // label_info_2
             // 
             this.label_info_2.AutoSize = true;
-            this.label_info_2.Location = new System.Drawing.Point(516, 83);
+            this.label_info_2.Location = new System.Drawing.Point(316, 78);
             this.label_info_2.Name = "label_info_2";
             this.label_info_2.Size = new System.Drawing.Size(28, 16);
             this.label_info_2.TabIndex = 11;
@@ -175,38 +179,63 @@
             // label_info_3
             // 
             this.label_info_3.AutoSize = true;
-            this.label_info_3.Location = new System.Drawing.Point(516, 123);
+            this.label_info_3.Location = new System.Drawing.Point(316, 133);
             this.label_info_3.Name = "label_info_3";
             this.label_info_3.Size = new System.Drawing.Size(28, 16);
             this.label_info_3.TabIndex = 12;
             this.label_info_3.Text = "255";
             // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label_info_3);
+            this.panel3.Controls.Add(this.label_info_2);
+            this.panel3.Controls.Add(this.trackBar1);
+            this.panel3.Controls.Add(this.label_info_1);
+            this.panel3.Controls.Add(this.trackBar2);
+            this.panel3.Controls.Add(this.trackBar3);
+            this.panel3.Location = new System.Drawing.Point(203, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(365, 330);
+            this.panel3.TabIndex = 7;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1x",
+            "2x",
+            "4x",
+            "8x",
+            "16x"});
+            this.comboBox2.Location = new System.Drawing.Point(96, 177);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(74, 24);
+            this.comboBox2.TabIndex = 3;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 358);
-            this.Controls.Add(this.label_info_3);
-            this.Controls.Add(this.label_info_2);
-            this.Controls.Add(this.label_info_1);
-            this.Controls.Add(this.trackBar3);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.trackBar1);
+            this.ClientSize = new System.Drawing.Size(580, 358);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Color Picker";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -225,6 +254,8 @@
         private System.Windows.Forms.Label label_info_1;
         private System.Windows.Forms.Label label_info_2;
         private System.Windows.Forms.Label label_info_3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 

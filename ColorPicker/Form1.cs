@@ -21,29 +21,37 @@ namespace ColorPicker
         async void UpdatePictureBox()
         {
 
-            int Width = pictureBox1.Width;
-            int Height = pictureBox1.Height;
-            Bitmap bmp = new Bitmap(Width, Height);
-            Graphics graphics = Graphics.FromImage(bmp);
             Rectangle bounds = Screen.GetBounds(Point.Empty);
             float Scalling = GetScalling.GetScalingFactor();
-            graphics.CopyFromScreen(0, 0, 0, 0, bounds.Size);
+         
 
+            Bitmap mainBitMap = new Bitmap(300, 300);
+            Graphics mainGr = Graphics.FromImage(mainBitMap);
          
             while (isDowned)
             {
+                int kef = int.Parse(comboBox2.SelectedItem.ToString().Replace("x", ""));
+                int Width = 150 / kef;
+                int Height = 150 / kef;
+                Bitmap bmp = new Bitmap(Width, Height);
+   
+                Graphics graphics = Graphics.FromImage(bmp);
                 graphics.Clear(Color.Gray);
               
                 graphics.CopyFromScreen(new Point((int)Math.Round(MousePosition.X*Scalling) - Width/2, (int)Math.Round(MousePosition.Y*Scalling) -Height/2), new Point(0,0), new Size(Width, Height));
                 var color =  bmp.GetPixel(Width / 2, Height / 2);
                 CurrentColor = color;
                 colorFillGr.Clear(color);
-                graphics.DrawRectangle(new Pen(Brushes.Red), new Rectangle(Width/2, Height/2-5, 1, 10));
-                graphics.DrawRectangle(new Pen(Brushes.Red), new Rectangle(Width/2-5, Height/2, 10, 1));
-                pictureBox1.Image = bmp;
+                mainGr.DrawImage(new Bitmap(bmp, mainBitMap.Width, mainBitMap.Height), 0, 0);
+                mainGr.DrawRectangle(new Pen(Brushes.Red), new Rectangle(mainBitMap.Width/2, mainBitMap.Height/2-5, 1, 10));
+                mainGr.DrawRectangle(new Pen(Brushes.Red), new Rectangle(mainBitMap.Width / 2-5, mainBitMap.Height/2, 10, 1));
+                pictureBox1.Image = mainBitMap;
                 pictureBox2.Image = colorFill;
 
-                await Task.Delay(10);     
+                bmp.Dispose();
+                graphics.Dispose();
+                
+                await Task.Delay(10);       
             }
         }
         Bitmap colorFill;
@@ -60,6 +68,8 @@ namespace ColorPicker
             panel2.BorderStyle = BorderStyle.FixedSingle;
             comboBox1.SelectedIndex = 0;
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.SelectedIndex = 0;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         bool isDowned = false;
@@ -143,6 +153,11 @@ namespace ColorPicker
             colorFillGr.Clear(Color.FromArgb(trackBar1.Value, trackBar2.Value, trackBar3.Value));
             pictureBox2.Image = colorFill;
             UpdateTextFromColor();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
